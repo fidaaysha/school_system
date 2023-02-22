@@ -25,14 +25,11 @@
     </style>
 </head>
 
-<body>
-
-
-
+<body >
     <div style="margin: 2%;">
         <input class="btn btn-primary" type="button" value="Go Back" onclick="history.back()">
     </div>
-    <h1> View Student </h1>
+    <h1>  Students </h1>
 
     <div class="container-fluid main">
         <div class="row">
@@ -52,17 +49,20 @@
                         <th>Guardian</th>
                     </tr>
                     
+                    {% for details in data1 %}
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{forloop.counter}}</td>
+                        <td><img src="{{details.Studentimage.url}}" alt="" height="100px" width="100px"></td>
+                        <td>{{details.Studentname}}</td>
+                        <td>{{details.Studentemail}}</td>
+                        <td>{{details.Studentdob}}</td>
+                        <td>{{details.Student_gender}}</td>
+                        <td>{{details.Studentmob}}</td>
+                        <td>{{details.Studentadress}}</td>
+                        <td>{{details.Studentclass.name}}</td>
+                        <td>{{details.Studentguardian}}</td>
                     </tr>
+                    {% endfor %}  
                 </table>
                
             </div>

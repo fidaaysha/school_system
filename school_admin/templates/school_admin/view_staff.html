@@ -51,17 +51,19 @@
                         <th>Department</th>
                     </tr>
                     
+                    {% for details in data %}
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{details.Staffname}}</td>
+                        <td>{{details.Staff_email}}</td>
+                        <td>{{details.Staff_dob}}</td>
+                        <td>{{details.Staff_gender}}</td>
+                        <td>{{details.Staff_mobile}}</td>
+                        <td>{{details.Staff_address}}</td>
+                        <td>{{details.Staff_qualification}}</td>
+                        <td>{{details.Staff_type}}</td>
+                    </tr>      
+                    {% endfor %}       
                 </table>
                
             </div>

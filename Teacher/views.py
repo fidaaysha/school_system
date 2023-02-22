@@ -52,7 +52,8 @@ def add_student_page(request):
     return render(request,'Teacher/add_student.html',{'data':classname}) 
 
 def view_student_page(request):
-    return render(request,'Teacher/view_student.html') 
+    student =  Students.objects.all()
+    return render(request,'Teacher/view_student.html',{'data1':student}) 
 
 def add_mark_page(request):
     classs=Classdivision.objects.all()

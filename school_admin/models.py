@@ -1,6 +1,8 @@
 from django.db import models
 from common.models import Login
 
+
+
 # Create your models here.
 class AddStaff(models.Model):
     Staffname=models.CharField(max_length=20)

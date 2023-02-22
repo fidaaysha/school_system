@@ -51,18 +51,20 @@
                         <th>Class</th>
                         <th>Guardian</th>
                     </tr>
-                    
+                    {% for details in data1 %}
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{forloop.counter}}</td>
+                        <td><img src="{{details.Studentimage.url}}" alt="" height="100px" width="100px"></td>
+                        <td>{{details.Studentname}}</td>
+                        <td>{{details.Studentemail}}</td>
+                        <td>{{details.Studentdob}}</td>
+                        <td>{{details.Student_gender}}</td>
+                        <td>{{details.Studentmob}}</td>
+                        <td>{{details.Studentadress}}</td>
+                        <td>{{details.Studentclass.name}}</td>
+                        <td>{{details.Studentguardian}}</td>
                     </tr>
+                    {% endfor %}  
                 </table>
                
             </div>

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Teachers,Login,AddStaff,OfficeStaff,Principal,Salary,Classroom,Classdivision,Subjects,Fees
 from Teacher.models import Studentfees
+from Teacher.models import Students
 
 # Create your views here.
 
@@ -176,7 +177,8 @@ def addfees(request):
     return render(request,'school_admin/addfees.html',{'data':cls})     
 
 def view_student_page(request):
-    return render(request,'school_admin/view_student.html') 
+    student =  Students.objects.all()
+    return render(request,'school_admin/view_student.html',{'data1':student}) 
 
 def salary_page(request):
     staff=AddStaff.objects.all()
