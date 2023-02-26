@@ -173,7 +173,6 @@ def addfees(request):
             classname_id=clsrm.id,
         )
 
-
     return render(request,'school_admin/addfees.html',{'data':cls})     
 
 def view_student_page(request):
@@ -207,14 +206,6 @@ def salary_page(request):
             Salarydet.Staff_salary=salary
             Salarydet.save()
             return render(request,'school_admin/assign_salary.html',{'data':staff})    
-
-
-
-
-
-
-        
-
     return render(request,'school_admin/assign_salary.html',{'data':staff}) 
 
 

@@ -204,7 +204,6 @@
             <form method="post">
                 {% csrf_token %}
                 <div class="user-details">
-
                     <div class="input-box">
                         <span class="details">Select Class</span>
                         <select name="classn" id="class">
@@ -212,10 +211,8 @@
                             {% for class in data %}
                             <option value="{{class.id}}">{{class.name}}</option>
                             {% endfor %}
-
                         </select>
                     </div>
-
                     <div class="input-box" id="subjecttext">
                         <span class="details">Enter Fees Name</span>
                         <input type="text" id="nosub" name="feesname" placeholder="Enter Fees Name" required>
@@ -223,59 +220,20 @@
                     <div class="input-box" id="subjecttext">
                         <span class="details">Enter Amount</span>
                         <input type="number" id="nosub" name="amount" placeholder="Enter Fees" required>
-                    </div>
-                    
-                </div>
-               
-
-                
+                    </div>                    
+                </div>                
                 <div class="button">
                     <input type="submit" value="Save">
                 </div>
                 <div class="button">
                     <input type="button" value="Go back" onclick="history.back()">
                 </div>
-        </div>
-
-        
+        </div>        
         </form>
     </div>
     </div>
     
-<!-- <script>
-    const form = document.querySelector('form');
-  
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-  
-    const inputs = Array.from(form.querySelectorAll('input[name]'));
-    const formData = {};
-  
-    inputs.forEach((input) => {
-      formData[input.name] = input.value;
-    });
-  
-    const jsonData = JSON.stringify(formData);
-    console.log(jsonData)
-  
-    // send the JSON data to the server using the Fetch API
-    fetch('/school_admin/addsubject', {
-      method: 'POST',
-      body: jsonData,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => {
-      // handle the response from the server here
-    })
-    .catch(error => {
-      // handle any errors that occur during the request here
-    });
-  });
-  
-  
-      </script> -->
+
 </body>
 
 </html>
